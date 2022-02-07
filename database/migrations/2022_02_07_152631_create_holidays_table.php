@@ -15,6 +15,17 @@ class CreateHolidaysTable extends Migration
     {
         Schema::create('holidays', function (Blueprint $table) {
             $table->id();
+            //Aggiungi colonne
+            $table->unsignedTinyInteger('guests');
+            $table->string('dicount_code', 8, 2)->nullable();
+            $table->float('price', 8, 2);
+            $table->boolean('confirmed');
+            $table->string('address', 100);
+            $table->string('post_code', 10);
+            $table->string('city', 70);
+            $table->string('country', 100);
+            $table->text('description', 500);
+            //
             $table->timestamps();
         });
     }
