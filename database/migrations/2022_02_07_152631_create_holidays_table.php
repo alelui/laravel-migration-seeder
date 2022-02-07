@@ -24,7 +24,7 @@ class CreateHolidaysTable extends Migration
             $table->string('post_code', 10);
             $table->string('city', 70);
             $table->string('country', 100);
-            $table->text('description', 500);
+            $table->text('description')->nullable();
             //
             $table->timestamps();
         });
